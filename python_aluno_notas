@@ -7,20 +7,16 @@
 
 # No sistema, todos os valores devem estar armazenados em variáveis.
 
-print('nome:')
-nome = input() 
+nome = input('Nome: ') 
 
-print('Nota1:')
-nota1 = float(input())
-print('Nota2:')
-nota2 = float(input())
+nota1 = float(input('Nota1: '))
+nota2 = float(input('Nota2: '))
+faltas = int(input('Faltas: '))
 
 media = (nota1 + nota2) / 2
-
-print('Faltas:')
-faltas = int(input())
 
 if (media < 7 or faltas > 3):
    print(nome + ' Reprovado')
 else:
    print(nome + ' Aprovado')
+

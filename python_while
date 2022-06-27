@@ -1,0 +1,18 @@
+
+lista = [0, 1, 2, 3, 4]
+
+funcao menu_op():
+   print('1: Soma')
+   print('2: Subtração')
+   print('3: Multiplicação')
+   print('4: Divisão')
+   print('0: Sair')
+   return (int(input('Entre uma operacao: ')))
+
+
+op = menu_op()
+ 
+while op not in lista:
+    a = int(input('Enter a number (-1 to quit): '))
+    
+    

@@ -10,24 +10,28 @@ def menu_op():
    return (int(input('Entre o numero da operacao: ')))
 
 def calcula(operador):
-  if (operador != 0):
-     num1 = int(input('entre um numero'))
-     num2 = int(input('entre outro numero'))
-     if (operador == '+'):
-       return (num1+num2)
-     elif (operador == '-'):
-       return (num1-num2)
-     elif (operador == '*'):
-       return (num1*num2)
-     elif (operador == '/'):
-       return (num1/num2)
+     num1 = int(input('entre um numero: '))
+     num2 = int(input('entre outro numero: '))
+     if (operador == 1):
+       calc = (num1+num2)
+     elif (operador == 1):
+       calc = (num1-num2)
+     elif (operador == 3):
+       calc = (num1*num2)
+     elif (operador == 4):
+       calc = (num1/num2)
  
-
+     print(calc)
+     return(calc)
 
 op = menu_op()
  
-while op not 0:
+while op != 0:
     if op not in lista:
-       essa opcao não existe
-    
-    
+      print('essa opcao não existe')
+    else:
+      if (op != 0):
+        calcula(op)
+      
+    op = menu_op()
+

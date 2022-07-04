@@ -1,0 +1,19 @@
+
+# Online Python compiler (interpreter) to run Python online.
+# Write Python 3 code in this online editor and run it.
+
+import panda as pd
+
+df = pd.read_csv('notas_alunos.csv')
+
+df_sit ['media'] = ( df['nota_1'] + df['nota_2'] )/2
+if df_sit ['media'] >= 7 and df ['faltas'] < 5 :
+   df_sit ['situacao'] = 'Aprovado'
+else:
+   df_sit ['situacao'] = 'Reprovado'
+
+close('alunos_situacao.csv')
+
+print ('Maior numero de faltas: ', df['faltas'].max())
+print ('Media geral: ', ( df['nota_1'] + df['nota_2'] ).median())
+print ('Maior media: ', ( df['nota_1'] + df['nota_2'] ).max())

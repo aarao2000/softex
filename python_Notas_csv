@@ -4,16 +4,17 @@
 
 import panda as pd
 
-df = pd.read_csv("notas_alunos.csv")
+df = pd.read_csv('notas_alunos.csv',a)
 
-df ['media'] = ( df["nota_1"] + df["nota_2"] )/2
-if df ['media'] >= 7 and df ['faltas'] < 5 :
-   df ['situacao'] = 'Aprovado'
-else:
-   df_sit ['situacao'] = 'Reprovado'
+df ["media"] = ( df["nota_1"] + df["nota_2"] )/2
+df.loc[ df["media"] >= 7 and df ["faltas"] < 5, "situacao"] = 'Aprovado'
+df.loc[ df["media"] < 7  or df ["faltas"] >= 5, "situacao"] = 'Reprovado'
 
+print(df.loc[:, ["nota_1", "nota_2"]].mean())    #media
+
+df.to_csv('notas_adicional.csv')
 close('alunos_situacao.csv')
 
 print ('Maior numero de faltas: ', df["faltas"].max())
-print ('Media geral: ', ( df["nota_1"].median() + df["nota_2"].median()) /2)
+print ('Media geral: ', ( df["nota_1"].mean() + df["nota_2"].mean()) /2)
 print ('Maior media: ', ( df["nota_1"] + df["nota_2"] ).max())

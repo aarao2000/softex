@@ -4,6 +4,15 @@
 
 import panda as pd
 
+df2 = pd.DataFrame(
+    {
+      "aluno":"a1","a2","a3","a4",
+      "nota_1":7,3,9,10,
+      "nota_2":7,10,4,6,
+      "faltas":1,7,2,9,
+    }
+)
+
 df = pd.read_csv('notas_alunos.csv',a)
 
 df ["media"] = ( df["nota_1"] + df["nota_2"] )/2

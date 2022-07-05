@@ -1,29 +1,35 @@
+#Desenvolva um programa que deve ler um arquivo csv intitulado “notas_alunos.csv”. O arquivo deve ter a seguinte estrutura:
 
-# Online Python compiler (interpreter) to run Python online.
-# Write Python 3 code in this online editor and run it.
+#aluno: Nome do aluno;
+#nota_1: Primeira nota;
+#nota_2: Segunda nota;
+#faltas: Número de faltas;
 
-import panda as pd
+#O programa lerá esse arquivo e criará duas colunas. A primeira coluna será “media”, que terá a média das duas notas do aluno. A segunda será “situacao”, com os valores: APROVADO ou REPROVADO.
 
-df2 = pd.DataFrame(
-    {
-      "aluno":"a1","a2","a3","a4",
-      "nota_1":7,3,9,10,
-      "nota_2":7,10,4,6,
-      "faltas":1,7,2,9,
-    }
-)
+#O aluno que tiver mais de 5 faltas ou possuir média menor que sete, será reprovado. O programa deverá salvar esse novo dataframe com o nome “alunos_situacao.csv”.
 
-df = pd.read_csv('notas_alunos.csv',a)
+Por fim, o programa deverá mostrar na tela:
+- o maior número de faltas; - a média geral das notas dos alunos; - e a maior média.
+
+
+import pandas as pd
+
+#df = pd.read_csv('notas_alunos.csv',a)
+d = {"aluno":["a1","a2","a3","a4"],"nota_1":[7,3,9,10],"nota_2": [7,10,4,6],"faltas":[1,7,2,9]}
+
+df = pd.DataFrame(d)
+print(df)
 
 df ["media"] = ( df["nota_1"] + df["nota_2"] )/2
-df.loc[ df["media"] >= 7 and df ["faltas"] < 5, "situacao"] = 'Aprovado'
-df.loc[ df["media"] < 7  or df ["faltas"] >= 5, "situacao"] = 'Reprovado'
-
-print(df.loc[:, ["nota_1", "nota_2"]].mean())    #media
-
-df.to_csv('notas_adicional.csv')
-close('alunos_situacao.csv')
+df.loc[ df["media"] >= 7, "situacao"] = 'Aprovado'
+df.loc[ df["media"] < 7 , "situacao"] = 'Reprovado'
+print(df)
 
 print ('Maior numero de faltas: ', df["faltas"].max())
 print ('Media geral: ', ( df["nota_1"].mean() + df["nota_2"].mean()) /2)
-print ('Maior media: ', ( df["nota_1"] + df["nota_2"] ).max())
+print ('Maior media: ', ( (df["nota_1"] + df["nota_2"])/2 ).max())
+
+
+#df.to_csv('notas_adicional.csv')
+#close('alunos_situacao.csv')

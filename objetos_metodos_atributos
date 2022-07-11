@@ -1,0 +1,11 @@
+Classifique dois objetos materiais e dois abstratos. Insira, no mínimo, três métodos e três atributos para cada.
+
+Realize essa atividade no WORD ou no Bloco de Notas, suba esse arquivo para algum repositório e compartilhe o link 
+no campo ao lado para que outros desenvolvedores possam analisá-lo.  
+
+
+objetos materiais: imoveis (endereco, valor, area, reformar(), alugar(), vender())
+                   veiculos (identificacao, tipo, ano, abastecimento(), locacao(), lavagem())
+
+objetos abstratos: cursos (nome, nivel, duracao, matricula(), avaliacao(), validacao())
+                   empreendimento (nome, setor, abrangencia, vendas(), incorporacao(), compra())

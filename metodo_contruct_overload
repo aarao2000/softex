@@ -1,1 +1,11 @@
+#Crie uma classe e insira nela, no mínimo, dois atributos, os quais devem ter um método acessor (get) e um método modificador (set) para cada. 
+#Defina um objeto para cada atributo e elabore um construtor para criar alguma regra.
+
+class Pessoa:
+  def __init__(self, peso, altura):
+    self.peso = peso
+    self.altura = altura
+
+p1 = Pessoa(30, 1.82)
+print (p1.peso)
 

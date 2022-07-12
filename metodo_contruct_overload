@@ -6,6 +6,28 @@ class Pessoa:
     self.peso = peso
     self.altura = altura
 
+  # getter method
+  def get_peso(self):
+      return self.peso
+      
+  def get_altura(self):
+      return self.altura
+      
+ # setter method
+  def set_peso(self, x):
+      self.peso = x
+      
+  def set_altura(self, x):
+      self.altura = x
+      
 p1 = Pessoa(30, 1.82)
 print (p1.peso)
+print (p1.altura)
+
+p2 = Pessoa(1,2)
+p2.set_peso(13)
+p2.set_altura(1.3)
+print(p2.get_peso())
+print(p2.get_altura())
+
 

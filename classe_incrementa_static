@@ -2,17 +2,14 @@
 #Crie uma classe de sua preferência com, no mínimo, uma variável, um #método e um incremento.
 #Depois, desenvolva três ou mais objetos para testar o código.
 
-class Incrementa:
-   cont = 0
-   
-   @staticmethod
-   def add():
-      cont += 1
-      return(cont)
+class myClass(object):
+    contador = 0
+
+    @classmethod
+    def myIncr():
+        contador += 1 
       
-      
-      
-i = Incrementa.add()
+i = myClass.myIncr()
 print (i)
 
 ii = Incrementa.add()

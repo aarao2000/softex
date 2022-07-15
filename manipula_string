@@ -1,0 +1,19 @@
+# Estruture três códigos, os quais devem conter uma função de manipulação de string que obtenha resultado.
+
+#concatena 2 strings
+def concat_str(X,Y):
+    return (X+Y)
+
+#retorna string em maisculo
+def maisc_str(X):
+    return (X.upper())
+
+#retorna string em minusculo
+def minusc_str(X):
+    return (X.lower())
+
+#chamada de funcao concatena
+print(concat_str('test','ando'))
+
+#chamada de funcao maiuscula apos concatena
+print(maisc_str(concat_str('test','ando')))

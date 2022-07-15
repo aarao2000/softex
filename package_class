@@ -1,5 +1,21 @@
-https://www.alura.com.br/apostila-java-orientacao-objetos/pacotes-organizando-suas-classes-e-bibliotecas#diretorios
-https://www.devmedia.com.br/compreendendo-o-uso-de-pacotes-ou-packages/27478
+// https://www.devmedia.com.br/compreendendo-o-uso-de-pacotes-ou-packages/27478
 
-Crie dois pacotes baseados nas atribuições de uma empresa e inclua classes neles. Lembre-se de trabalhar com os padrões Java.
+// Crie dois pacotes baseados nas atribuições de uma empresa e inclua classes neles. Lembre-se de trabalhar com os padrões Java.
 
+package br.empresa.pac1;
+
+public class Vendas {
+// declaracoes de atributos e metodos
+}
+public class Compras {
+// declaracoes de atributos e metodos
+}
+
+package br.empresa.pac2;
+
+public class Suprimento {
+// declaracoes de atributos e metodos
+}
+public class Aquisicao {
+// declaracoes de atributos e metodos
+}

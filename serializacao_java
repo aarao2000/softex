@@ -1,0 +1,68 @@
+// Crie um exemplo de como funcionam a serialização e a desserialização de um sistema qualquer. 
+// Utilize as classes, os objetos e métodos padrões da Java e insira um endereço físico fictício.
+
+// baseado em https://www.geeksforgeeks.org/serialization-in-java/
+
+// codigo Java com serializacao and desserializacao de um objeto Java
+
+import java.io.*;
+  
+class Teste implements java.io.Serializable
+{
+    public int a;
+    public String b;
+  
+    // Default constructor
+    public Teste(int a, String b)
+    {
+        this.a = a;
+        this.b = b;
+    }
+  
+}
+  
+class Test
+{
+    public static void main(String[] args)
+    {   
+        Teste meuObjeto = new Teste(1, "Lula Presidente");
+        String meuArquivo = "serializado.txt";
+          
+        // Serialization 
+ 
+            //Saving of object in a file
+            FileOutputStream arquivo = new FileOutputStream(meuArquivo);
+            ObjectOutputStream saida = new ObjectOutputStream(arquivo);
+              
+            // Method for serialization of object
+            saida.writeObject(meuObjeto);
+              
+            saida.close();
+            arquivo.close();
+              
+            System.out.println("Objeto serializado");
+  
+        }
+  
+  
+        Teste novoObjeto1 = null;
+  
+        // Deserializacao
+        {   
+            // Lero objeto de um arquivo
+            FileInputStream arquivo = new FileInputStream(meuArquivo);
+            ObjectInputStream entrada = new ObjectInputStream(arquivo);
+              
+            // Metodo para desserializacao de objeto
+           novoObjeto1 = (Teste)entrada.readObject();
+              
+            entrada.close();
+            arquivo.close();
+              
+            System.out.println("Objeto desserializado ");
+            System.out.println("a = " + novoObjeto1.a);
+            System.out.println("b = " + novoObjeto1.b);
+        }
+ 
+    }
+}

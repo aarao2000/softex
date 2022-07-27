@@ -1,6 +1,7 @@
 
-Para tratar e capturar as exceções na Java, é necessário utilizar alguns blocos de tratamento try/catch. No try, será inserido o código que está suscetível a exceções e, no bloco catch, será inserido o tratamento dessa exceção caso ela ocorra.
-public static void main (String[] args) {
+// Para tratar e capturar as exceções na Java, é necessário utilizar alguns blocos de tratamento try/catch. No try, será inserido o código que está suscetível a exceções e, no bloco catch, será inserido o tratamento dessa exceção caso ela ocorra.
+
+/* public static void main (String[] args) {
 try {
      System.out.println(4 / 0);
 } catch (Exception excecao) {
@@ -8,8 +9,20 @@ try {
 }
      System.out.println(“Fim”);
 }
+*/
 
+// Crie uma situação em que ocorra uma exceção dentro de um código. Utilize try/catch para realizar a captura e tratamento dessa exceção. 
 
-Crie uma situação em que ocorra uma exceção dentro de um código. Utilize try/catch para realizar a captura e tratamento dessa exceção. 
+// http://www.inf.ufes.br/~vitorsouza/archive/2020/wp-content/uploads/java-br-curso-basico-2018-slides08.pdf
 
-Trabalhe esse código em seu IDE, suba ele para sua conta no GitHub e compartilhe o link desse projeto no campo ao lado para que outros desenvolvedores possam analisá-lo.
+import java.io.FileNotFoundException; 
+public class TesteErro { 
+   public static void main(String[] args) { 
+      try { 
+         new java.io.FileInputStream("arquivo.txt");
+      }
+      catch (FileNotFoundException e) { 
+         System.out.println("Arquivo não encontrado");
+      }
+    }
+}

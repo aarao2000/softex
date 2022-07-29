@@ -1,0 +1,27 @@
+
+observado em http://jsfiddle.net/WilsonPage/6eqMn/
+
+var print = function(o){
+    var str='';
+
+    for(var p in o){
+        if(typeof o[p] == 'string'){
+            str+= p + ': ' + o[p]+'; </br>';
+        }else{
+            str+= p + ': { </br>' + print(o[p]) + '}';
+        }
+    }
+
+    return str;
+}
+    
+    
+var myObject = {
+    name: 'Wilson Page',
+    contact: {
+        email: 'wilson@hotmail.com',
+        tel: '123456789'
+    }  
+}
+
+$('body').append( print(myObject) );
